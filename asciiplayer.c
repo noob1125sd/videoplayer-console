@@ -1,5 +1,3 @@
-// ОШИБКИ В КОДЕ:
-
 #include <stdio.h>
 #include <windows.h>
 #include <stdlib.h>
@@ -69,7 +67,7 @@ void hide_cursor() {
     HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cursorInfo;
     GetConsoleCursorInfo(hOut, &cursorInfo);
-    cursorInfo.bVisible = FALSE;  // выключить видимость
+    cursorInfo.bVisible = FALSE;
     SetConsoleCursorInfo(hOut, &cursorInfo);
 }
 int main() {
@@ -80,4 +78,5 @@ int main() {
     aviinit(filename);
     play();
     return 0;
+
 }
